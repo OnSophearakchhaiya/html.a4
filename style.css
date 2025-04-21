@@ -1,0 +1,88 @@
+/* Reset and global settings */
+* {
+  box-sizing: border-box;
+}
+
+/* Clearfix helper */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer styling */
+.ft {
+  background-color: blanchedalmond;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Gallery container */
+.gallery-raw {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual gallery item */
+.gallery-raw .responsive {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 21%;
+  margin: 10px;
+  border: 2px solid gold;
+  box-sizing: border-box;
+  background-color: white; /* Optional for better contrast */
+}
+
+/* Gallery item hover effect */
+.gallery:hover {
+  border: 2px solid gold;
+  transform: scale(1.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  filter: brightness(90%);
+  transition: transform 0.3s ease;
+}
+
+/* Inner gallery container to ensure full height */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Image styling */
+.gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 2; /* Maintains consistent aspect ratio */
+  object-fit: cover;
+  flex-grow: 1;
+}
+
+/* Description box */
+.desc {
+  padding: 10px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+/* Responsive breakpoints */
+@media only screen and (max-width: 768px) {
+  .gallery-raw .responsive { flex: 1 0 45%; }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery-raw .responsive { flex: 1 0 100%; }
+}
+.g{
+  text-align: center;
+}
+.responsive:hover .gallery {
+  border: 2px solid gold;
+  transform: scale(1.05); /* optional: 1.2 might be too big */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  filter: brightness(90%);
+  transition: transform 0.3s ease;
+}
